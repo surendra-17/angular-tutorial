@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <script src="./Scripts/angular.js"></script>
+    <script src="./Scripts/main.js"></script>
+    <link rel="stylesheet" href="./css/calc.css">
+</head>
+
+<body ng-app="myNgApp">
+    <div id='calc-contain' ng-controller="calcController">
+        <h1>{{message}}</h1>
+        <input type="text" name="answer" ng-model="input" ng-pattern="input_regex"/>
+        <h4 id="output">= {{output}}</h4>
+        <br><br>
+
+        <input type="button" value=" 1 " ng-click="addToInput('1')" />
+        <input type="button" value=" 2 " ng-click="addToInput('2')" />
+        <input type="button" value=" 3 " ng-click="addToInput('3')" />
+        <input type="button" value=" + " ng-click="addToInput('+')" />
+        <br />
+
+        <input type="button" value=" 4 " ng-click="addToInput('4')" />
+        <input type="button" value=" 5 " ng-click="addToInput('5')" />
+        <input type="button" value=" 6 " ng-click="addToInput('6')" />
+        <input type="button" value=" - " ng-click="addToInput('-')" />
+        </br>
+
+        <input type="button" value=" 7 " ng-click="addToInput('7')" />
+        <input type="button" value=" 8 " ng-click="addToInput('8')" />
+        <input type="button" value=" 9 " ng-click="addToInput('9')" />
+        <input type="button" value=" * " ng-click="addToInput('*')" />
+        </br>
+
+        <input type="button" value=" c " ng-click="clearInput()" />
+        <input type="button" value=" 0 " ng-click="addToInput('0')" />
+        <input type="button" value=" = " ng-click="calculateAnswer()" ng-disabled="calculateBtnStatus"/>
+        <input type="button" value=" / " ng-click="addToInput('/')" />
+        </br>
+    </div>
+
+</body>
+</html>
